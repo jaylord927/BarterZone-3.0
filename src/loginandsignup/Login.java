@@ -40,7 +40,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(102, 187, 198));
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logo.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BarterZone/resources/icon/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
@@ -52,7 +52,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(424, 424, 424)
                         .addComponent(jLabel5))
                     .addGroup(RightLayout.createSequentialGroup()
-                        .addGap(85, 85, 85)
+                        .addGap(82, 82, 82)
                         .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -91,6 +91,11 @@ public class Login extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("I don't have an account");
 
@@ -178,6 +183,10 @@ public class Login extends javax.swing.JFrame {
         SignUpFrame.setLocationRelativeTo(null); 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
