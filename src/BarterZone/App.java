@@ -8,5 +8,6 @@ public class App {
         LandingFrame.setVisible(true);
         LandingFrame.pack();
         LandingFrame.setLocationRelativeTo(null);
+        
     }
 }
