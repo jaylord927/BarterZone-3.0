@@ -1,6 +1,8 @@
 package loginandsignup;
 
+import BarterZone.dialmessage.successmessage;
 import database.config.config;
+import javax.swing.JOptionPane;
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -22,7 +24,6 @@ public class SignUp extends javax.swing.JFrame {
         Right = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        name = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -30,15 +31,16 @@ public class SignUp extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         login = new javax.swing.JButton();
         signup = new javax.swing.JButton();
+        name = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Left.setBackground(new java.awt.Color(102, 187, 198));
+        Left.setBackground(new java.awt.Color(12, 192, 223));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BarterZone/resources/icon/logo.png"))); // NOI18N
 
@@ -62,7 +64,7 @@ public class SignUp extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(homebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(153, 153, 153))
+                .addGap(150, 150, 150))
         );
         LeftLayout.setVerticalGroup(
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,8 +76,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addContainerGap(113, Short.MAX_VALUE))
         );
 
-        jPanel1.add(Left);
-        Left.setBounds(0, 0, 400, 500);
+        jPanel1.add(Left, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Right.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -87,17 +88,9 @@ public class SignUp extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Full Name");
 
-        name.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        name.setForeground(new java.awt.Color(102, 102, 102));
-        name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameActionPerformed(evt);
-            }
-        });
-
         jLabel6.setBackground(new java.awt.Color(102, 102, 102));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setText("Username or Email");
+        jLabel6.setText("Email");
 
         email.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         email.setForeground(new java.awt.Color(102, 102, 102));
@@ -133,6 +126,14 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
+        name.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        name.setForeground(new java.awt.Color(102, 102, 102));
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
         RightLayout.setHorizontalGroup(
@@ -144,11 +145,11 @@ public class SignUp extends javax.swing.JFrame {
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel5)
-                                .addComponent(name)
                                 .addComponent(jLabel6)
                                 .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                                 .addComponent(jLabel7)
-                                .addComponent(pass))
+                                .addComponent(pass)
+                                .addComponent(name))
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -170,9 +171,9 @@ public class SignUp extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(46, 46, 46)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(17, 17, 17)
                 .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,13 +188,12 @@ public class SignUp extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
-                    .addContainerGap(373, Short.MAX_VALUE)
+                    .addContainerGap(366, Short.MAX_VALUE)
                     .addComponent(signup, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(90, 90, 90)))
+                    .addGap(97, 97, 97)))
         );
 
-        jPanel1.add(Right);
-        Right.setBounds(400, 0, 400, 500);
+        jPanel1.add(Right, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -221,87 +221,77 @@ public class SignUp extends javax.swing.JFrame {
 
     }//GEN-LAST:event_loginActionPerformed
 
-    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // Navigate to Home/Landing page
-        BarterZone.landing.landing LandingFrame = new BarterZone.landing.landing();
-        LandingFrame.setVisible(true);
-        LandingFrame.pack();
-        LandingFrame.setLocationRelativeTo(null);
-        this.dispose();    }//GEN-LAST:event_homebuttonActionPerformed
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+
+
+    }//GEN-LAST:event_emailActionPerformed
 
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
         String fullName = name.getText().trim();
-        String userEmail = .getText().trim();
-        String password = new String(pass.getPassword()).trim();
+        String emaill = email.getText().trim();  
+        String password = new String(pass.getPassword());
 
-        if (fullName.isEmpty() || userEmail.isEmpty() || password.isEmpty()) {
-            JOptionPane.showMessageDialog(this,
-                    "Please fill in all fields!",
-                    "Validation Error",
-                    JOptionPane.WARNING_MESSAGE);
+        if (fullName.isEmpty() || emaill.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        if (!isValidEmail(userEmail)) {
-            JOptionPane.showMessageDialog(this,
-                    "Please enter a valid email address!",
-                    "Invalid Email",
-                    JOptionPane.WARNING_MESSAGE);
-            email.requestFocus();
+        if (!emaill.contains("@") || !emaill.contains(".")) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid email address!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         if (password.length() < 6) {
-            JOptionPane.showMessageDialog(this,
-                    "Password must be at least 6 characters long!",
-                    "Weak Password",
-                    JOptionPane.WARNING_MESSAGE);
-            pass.requestFocus();
+            JOptionPane.showMessageDialog(this, "Password must be at least 6 characters long!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         try {
-            if (isEmailExists(userEmail)) {
-                JOptionPane.showMessageDialog(this,
-                        "This email is already registered. Please use a different email or login.",
-                        "Email Exists",
-                        JOptionPane.WARNING_MESSAGE);
+            config dbConfig = new config();
+
+            String hashedPassword = dbConfig.hashPassword(password);
+
+            String checkEmailSQL = "SELECT COUNT(*) FROM tbl_trader WHERE trader_email = ?";
+            boolean emailExists = dbConfig.getSingleValue(checkEmailSQL, emaill) > 0;
+
+            if (emailExists) {
+                JOptionPane.showMessageDialog(this, "Email already registered!", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
-            String hashedPassword = config.hashPassword(password);
+            String sqltrader = "INSERT INTO tbl_trader (trader_name, trader_email, trader_pass) VALUES (?, ?, ?)";
 
-            String sql = "INSERT INTO tbl_trader (trader_name, trader_email, trader_pass) VALUES (?, ?, ?)";
+            dbConfig.addRecord(sqltrader, fullName, emaill, hashedPassword);
 
-            dbConfig.addRecord(sql, fullName, userEmail, hashedPassword);
+            successmessage successFrame = new successmessage();
+            successFrame.setVisible(true);
+            successFrame.pack();
+            successFrame.setLocationRelativeTo(null);
 
-            JOptionPane.showMessageDialog(this,
-                    "Account created successfully!\nYou can now login.",
-                    "Success",
-                    JOptionPane.INFORMATION_MESSAGE);
-
-            // Clear form
-            clearForm();
-
-            // Navigate to login page
-            loginActionPerformed(evt);
+            this.dispose();
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,
-                    "Error creating account: " + e.getMessage(),
-                    "Registration Error",
-                    JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
-    }     }//GEN-LAST:event_signupActionPerformed
+
+
+    }//GEN-LAST:event_signupActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
- // Move focus to next field when Enter is pressed
-        email.requestFocus();    }//GEN-LAST:event_nameActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+// TODO add your handling code here:
+    }//GEN-LAST:event_nameActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+        landing.landing landingFrame = new landing.landing();
+        landingFrame.setVisible(true);
+        landingFrame.pack();
+        landingFrame.setLocationRelativeTo(null);
+        this.dispose();
+
+
+    }//GEN-LAST:event_homebuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,4 +314,5 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JPasswordField pass;
     private javax.swing.JButton signup;
     // End of variables declaration//GEN-END:variables
+
 }

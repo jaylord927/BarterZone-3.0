@@ -1,15 +1,15 @@
-
 package loginandsignup;
 
+import database.config.config;
+import javax.swing.JOptionPane;
+import landing.landing;
 
 public class Login extends javax.swing.JFrame {
 
-  
     public Login() {
         initComponents();
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -21,10 +21,10 @@ public class Login extends javax.swing.JFrame {
         homebutton = new javax.swing.JButton();
         Left = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        emailusernametext = new javax.swing.JLabel();
+        emailuser = new javax.swing.JTextField();
+        passwordtext = new javax.swing.JLabel();
+        pass = new javax.swing.JPasswordField();
         login = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         signup = new javax.swing.JButton();
@@ -36,7 +36,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(null);
 
-        Right.setBackground(new java.awt.Color(102, 187, 198));
+        Right.setBackground(new java.awt.Color(12, 192, 223));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel5.setBackground(new java.awt.Color(102, 187, 198));
@@ -62,7 +62,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(424, 424, 424)
                         .addComponent(jLabel5))
                     .addGroup(RightLayout.createSequentialGroup()
-                        .addGap(82, 82, 82)
+                        .addGap(81, 81, 81)
                         .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
@@ -72,13 +72,13 @@ public class Login extends javax.swing.JFrame {
         RightLayout.setVerticalGroup(
             RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RightLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(128, 128, 128)
                 .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(homebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
+                .addGap(1, 1, 1)
                 .addComponent(jLabel5)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jPanel1.add(Right);
@@ -91,16 +91,27 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("LOGIN");
 
-        jLabel2.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Email");
+        emailusernametext.setBackground(new java.awt.Color(102, 102, 102));
+        emailusernametext.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailusernametext.setText("Email or Username");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
+        emailuser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailuser.setForeground(new java.awt.Color(102, 102, 102));
+        emailuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailuserActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Password");
+        passwordtext.setBackground(new java.awt.Color(102, 102, 102));
+        passwordtext.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        passwordtext.setText("Password");
+
+        pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passActionPerformed(evt);
+            }
+        });
 
         login.setBackground(new java.awt.Color(0, 102, 102));
         login.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -136,10 +147,10 @@ public class Login extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel2)
-                                .addComponent(jTextField1)
-                                .addComponent(jLabel3)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
+                                .addComponent(emailusernametext)
+                                .addComponent(emailuser)
+                                .addComponent(passwordtext)
+                                .addComponent(pass, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LeftLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
@@ -153,13 +164,13 @@ public class Login extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(jLabel1)
                 .addGap(40, 40, 40)
-                .addComponent(jLabel2)
+                .addComponent(emailusernametext)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailuser, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(passwordtext)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
@@ -191,41 +202,100 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
-        
+
         SignUp SignUpFrame = new SignUp();
         SignUpFrame.setVisible(true);
         SignUpFrame.pack();
-        SignUpFrame.setLocationRelativeTo(null); 
+        SignUpFrame.setLocationRelativeTo(null);
         this.dispose();
+
+
     }//GEN-LAST:event_signupActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+        String email = emailuser.getText().trim();
+        String password = new String(pass.getPassword());
+
+        if (email.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter email and password!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            config dbConfig = new config();
+
+            String checkUserSQL = "SELECT trader_id, trader_name, trader_pass FROM tbl_trader WHERE trader_email = ?";
+
+            java.util.List<java.util.Map<String, Object>> users = dbConfig.fetchRecords(checkUserSQL, email);
+
+            if (users.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "User not found!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            java.util.Map<String, Object> user = users.get(0);
+            String storedHashedPassword = (String) user.get("trader_pass");
+            String traderName = (String) user.get("trader_name");
+            int traderId = (int) user.get("trader_id");
+
+            String inputHashedPassword = dbConfig.hashPassword(password);
+
+            if (inputHashedPassword.equals(storedHashedPassword)) {
+                JOptionPane.showMessageDialog(this, "Login successful!\nWelcome " + traderName, "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                landing landingFrame = new landing();
+                landingFrame.setVisible(true);
+                landingFrame.pack();
+                landingFrame.setLocationRelativeTo(null);
+
+                pass.setText("");
+
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "Incorrect password!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+
     }//GEN-LAST:event_loginActionPerformed
 
+    private void emailuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailuserActionPerformed
+
+
+    }//GEN-LAST:event_emailuserActionPerformed
+
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+        landing landingFrame = new landing();
+        landingFrame.setVisible(true);
+        landingFrame.pack();
+        landingFrame.setLocationRelativeTo(null);
+        this.dispose();
+
+
     }//GEN-LAST:event_homebuttonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_passActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
+    private javax.swing.JTextField emailuser;
+    private javax.swing.JLabel emailusernametext;
     private javax.swing.JButton homebutton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton login;
     private javax.swing.JLabel logo;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JLabel passwordtext;
     private javax.swing.JButton signup;
     // End of variables declaration//GEN-END:variables
 }
