@@ -1,8 +1,10 @@
 package loginandsignup;
 
 import BarterZone.dialmessage.successmessage;
+import Barterzone.ui.Transition;
 import database.config.config;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -10,7 +12,10 @@ public class SignUp extends javax.swing.JFrame {
 
     public SignUp() {
         initComponents();
-        dbConfig = new config(); // Initialize database configuration
+        dbConfig = new config();
+        setSize(800, 500);
+        setResizable(false);
+        setLocationRelativeTo(null); 
     }
 
     @SuppressWarnings("unchecked")
@@ -45,7 +50,8 @@ public class SignUp extends javax.swing.JFrame {
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BarterZone/resources/icon/logo.png"))); // NOI18N
 
         homebutton.setBackground(new java.awt.Color(0, 102, 102));
-        homebutton.setForeground(new java.awt.Color(12, 213, 49));
+        homebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        homebutton.setForeground(new java.awt.Color(11, 188, 46));
         homebutton.setText("HOME");
         homebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +87,8 @@ public class SignUp extends javax.swing.JFrame {
         Right.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setBackground(new java.awt.Color(0, 102, 102));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 102, 102));
         jLabel4.setText("SIGN UP");
 
         jLabel5.setBackground(new java.awt.Color(102, 102, 102));
@@ -109,6 +116,7 @@ public class SignUp extends javax.swing.JFrame {
 
         jLabel8.setText("I've an account");
 
+        login.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         login.setForeground(new java.awt.Color(11, 188, 46));
         login.setText("Login");
         login.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +126,8 @@ public class SignUp extends javax.swing.JFrame {
         });
 
         signup.setBackground(new java.awt.Color(0, 102, 102));
-        signup.setForeground(new java.awt.Color(12, 213, 49));
+        signup.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        signup.setForeground(new java.awt.Color(255, 255, 255));
         signup.setText("Sign Up");
         signup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,7 +197,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
-                    .addContainerGap(366, Short.MAX_VALUE)
+                    .addContainerGap(382, Short.MAX_VALUE)
                     .addComponent(signup, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(97, 97, 97)))
         );
@@ -212,12 +221,12 @@ public class SignUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // Navigate to Login page
         Login LoginFrame = new Login();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
         LoginFrame.setLocationRelativeTo(null);
         this.dispose();
+
 
     }//GEN-LAST:event_loginActionPerformed
 
@@ -228,7 +237,7 @@ public class SignUp extends javax.swing.JFrame {
 
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
         String fullName = name.getText().trim();
-        String emaill = email.getText().trim();  
+        String emaill = email.getText().trim();
         String password = new String(pass.getPassword());
 
         if (fullName.isEmpty() || emaill.isEmpty() || password.isEmpty()) {
@@ -293,9 +302,6 @@ public class SignUp extends javax.swing.JFrame {
 
     }//GEN-LAST:event_homebuttonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
