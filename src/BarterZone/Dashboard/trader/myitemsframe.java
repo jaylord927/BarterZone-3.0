@@ -148,6 +148,13 @@ public class myitemsframe extends javax.swing.JFrame {
                 myitemstableMouseClicked(evt);
             }
         });
+        myitemstable.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                myitemstableInputMethodTextChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(myitemstable);
 
         myitems.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 640, 250));
@@ -166,10 +173,7 @@ public class myitemsframe extends javax.swing.JFrame {
                 .addComponent(tradermenu, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(myitems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
-                        .addGap(0, 0, 0))))
+                    .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,6 +235,10 @@ public class myitemsframe extends javax.swing.JFrame {
     private void myitemstableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myitemstableMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_myitemstableMouseClicked
+
+    private void myitemstableInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_myitemstableInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_myitemstableInputMethodTextChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/BarterZone/resources/images/messagefix.png</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/loginandsignup/SignUp.java</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/BarterZone/Dashboard/trader/myitemsframe.java</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/BarterZone/Dashboard/trader/trader_dashboard.java</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/landing/landing.java</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/BarterZone/resources/images/message.png</file>
-            <file>file:/D:/BarterZone/BarterZone-3.0/src/loginandsignup/Login.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/BarterZone/Dashboard/trader/myitemsframe.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/BarterZone/App.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/loginandsignup/SignUp.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/BarterZone/Dashboard/trader/trader_dashboard.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/database/config/config.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/BarterZone/Dashboard/admin/admin_dashboard.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/BarterZone/Dashboard/admin/trader_table.java</file>
+            <file>file:/C:/user/BarterZone-3.0/src/loginandsignup/Login.java</file>
         </group>
     </open-files>
 </project-private>
